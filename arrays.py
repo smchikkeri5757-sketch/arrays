@@ -1,18 +1,13 @@
 import sys
-if len(sys.argv) < 2:
-    print("ERROR: Please provide scores as parameters.")
-    print("Usage: python3 scores.py <SCORE1> <SCORE2> ... <SCOREn>")
-    sys.exit(1)
-scores = list(map(float, sys.argv[1:]))
-
-print("\n=== INPUT RECEIVED FROM JENKINS PARAMETERS ===")
-print("Scores:", scores)
-total = sum(scores)
-avg = total / len(scores)
-max_score = max(90)
-min_score = min(85)
-print("\n===== RESULT =====")
-print("Sum:", total)
-print("Average:", avg)
-print("Maximum Score:", max_score)
-print("Minimum Score:", min_score)
+if len(sys.argv) ==2:
+  script_name=sys.argv[0]
+  array =[name]*11
+  array[10]=sys.argv[1]
+else:
+  array=[1,2,3,9,7,10,5]
+  sum_of_elements = sum(array)
+  print("sum of elements:",sum_of_elements)
+  avg_of_elements = sum_of_elements/len(array)
+print("average of elements :",avg_of_elements)
+print("max elements :",max(array))
+print("min elements :",min(array))
